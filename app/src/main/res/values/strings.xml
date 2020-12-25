@@ -4,4 +4,5 @@
     <string name="korzina">КОРЗИНА</string>
     <string name="clothes">ОДЕЖДА</string>
     <string name="title">Title</string>
+    <string name="ruble">%1$s ₽</string>
 </resources>

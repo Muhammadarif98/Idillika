@@ -5,6 +5,8 @@ import android.annotation.SuppressLint;
 import android.graphics.drawable.Drawable;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -16,9 +18,10 @@ import com.squareup.picasso.Picasso;
 
 public class MyHolder extends RecyclerView.ViewHolder {
 
-    ImageView mImageView,mFavorite;
+    ImageView mImageView;
+    CheckBox mFavorite;
     TextView mTitle,mBrand,mPrice;
-    Boolean mBoolean = false;
+    //Boolean mBoolean;
 
     public MyHolder(@NonNull View itemView) {
         super(itemView);
@@ -32,40 +35,16 @@ public class MyHolder extends RecyclerView.ViewHolder {
 
     }
 
-    public void bind(Clothes models,MyAdapter adapter){
-        //mBoolean.compareTo(models.getFavorite());
-        mTitle.setText(models.getTitle());
-        mBrand.setText(models.getBrand());
-        Picasso.get().load(models.getImageLink()).fit().into(mImageView);
-        mPrice.setText(models.getPrice());
-        String id = models.getId();
-        adapter.updateValue(this,adapter.getValue(id),id);
-        mFavorite.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(mFavorite.isClickable()){
-                    adapter.updateValue(MyHolder.this,adapter.getValue(id),id);
-
-                }
-
-            }
+    public void bind(Clothes model,MyAdapter adapter){
+        mTitle.setText(model.getTitle());
+        mBrand.setText(model.getBrand());
+        Picasso.get().load(model.getImageLink()).fit().into(mImageView);
+        mPrice.setText(mPrice.getContext().getString(R.string.ruble, model.getPrice()));
+        String id = model.getId();
+        mFavorite.setChecked(adapter.getValue(model.getId()));
+        mFavorite.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            adapter.updateValue(id, isChecked);
         });
 
     }
-//    public void updateValue(MyAdapter adapter ,boolean newValue,String id) {
-//        adapter.mPrefs.edit().putBoolean(id, newValue).apply();
-//        if(mBoolean){
-//            mFavorite.setImageResource(R.drawable.ic_baseline_favorite_24);
-//            mBoolean = true;
-//        }else {
-//            mFavorite.setImageResource(R.drawable.ic_baseline_favorite_border_24);
-//            mBoolean = false;
-//        }
-//
-//    }
-//    public boolean getValue(MyAdapter adapter,String id){
-//        return adapter.mPrefs.getBoolean(id,true);
-//    }
-
-
 }

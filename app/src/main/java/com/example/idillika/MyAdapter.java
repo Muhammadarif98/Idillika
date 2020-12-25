@@ -31,20 +31,11 @@ public class MyAdapter extends RecyclerView.Adapter<MyHolder> {
     public void onBindViewHolder(@NonNull MyHolder holder, int position) {
         holder.bind(models.get(position), MyAdapter.this);
     }
-     public void updateValue(MyHolder holder ,int newValue,String id) {
-         mPrefs.edit().putInt(id, newValue).apply();
-        if(holder.mFavorite.isClickable()) {
-                if (holder.mBoolean.equals(false)) {
-                    holder.mFavorite.setImageResource(R.drawable.ic_baseline_favorite_24);
-                    holder.mBoolean = true;
-                } else {
-                    holder.mFavorite.setImageResource(R.drawable.ic_baseline_favorite_border_24);
-                    holder.mBoolean = false;
-                }
-        }
+     public void updateValue(String id, boolean isChecked) {
+        mPrefs.edit().putBoolean(id, isChecked).apply();
     }
-    public int getValue(String id){
-        return mPrefs.getInt(id,0);
+    public boolean getValue(String id){
+        return mPrefs.getBoolean(id,false);
     }
 
     @Override
