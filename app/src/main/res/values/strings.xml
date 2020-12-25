@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">IDILLIKA</string>
+    <string name="tovari">показать товары</string>
+    <string name="korzina">КОРЗИНА</string>
+    <string name="clothes">ОДЕЖДА</string>
+    <string name="title">Title</string>
+</resources>
