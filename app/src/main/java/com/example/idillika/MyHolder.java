@@ -39,12 +39,12 @@ public class MyHolder extends RecyclerView.ViewHolder {
         Picasso.get().load(models.getImageLink()).fit().into(mImageView);
         mPrice.setText(models.getPrice());
         String id = models.getId();
-        adapter.updateValue(this,adapter.getValue(adapter,id),id);
+        adapter.updateValue(this,adapter.getValue(id),id);
         mFavorite.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(mFavorite.isClickable()){
-                    adapter.updateValue(MyHolder.this,adapter.getValue(adapter,id),id);
+                    adapter.updateValue(MyHolder.this,adapter.getValue(id),id);
 
                 }
 

@@ -32,9 +32,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyHolder> {
         holder.bind(models.get(position), MyAdapter.this);
     }
      public void updateValue(MyHolder holder ,int newValue,String id) {
-        mPrefs.edit().putInt(id, newValue).apply();
+         mPrefs.edit().putInt(id, newValue).apply();
         if(holder.mFavorite.isClickable()) {
-                if (holder.mBoolean) {
+                if (holder.mBoolean.equals(false)) {
                     holder.mFavorite.setImageResource(R.drawable.ic_baseline_favorite_24);
                     holder.mBoolean = true;
                 } else {
@@ -43,8 +43,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyHolder> {
                 }
         }
     }
-    public int getValue(MyAdapter adapter,String id){
-        return adapter.mPrefs.getInt(id,0);
+    public int getValue(String id){
+        return mPrefs.getInt(id,0);
     }
 
     @Override
