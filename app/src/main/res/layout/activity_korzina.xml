@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".KorzinaActivity">
+
     <include
         android:id="@+id/toolbar"
         layout="@layout/toolbar_main" />
@@ -19,13 +20,13 @@
         android:layout_marginEnd="134dp"
         android:layout_marginRight="134dp"
         android:layout_marginBottom="447dp"
+        android:src="@drawable/ic_korzina"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.621"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.375"
-        android:src="@drawable/ic_korzina" />
+        app:layout_constraintVertical_bias="0.375" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -37,19 +38,18 @@
         android:layout_marginEnd="107dp"
         android:layout_marginRight="107dp"
         android:layout_marginBottom="447dp"
+        android:src="@drawable/ic_line"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.583"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.379"
-        android:src="@drawable/ic_line" />
+        app:layout_constraintVertical_bias="0.379" />
 
     <LinearLayout
         android:id="@+id/button2"
         android:layout_width="343dp"
         android:layout_height="48dp"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
@@ -68,21 +68,21 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="19dp"
+            android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="15dp"
             android:layout_marginBottom="16dp"
-            android:text="Начать покупки"
+            android:text="@string/starttovar"
             android:textAllCaps="true"
             android:textColor="@color/white"
             android:textSize="14sp"
-            android:textStyle="bold">
-
-        </TextView>
+            android:textStyle="bold"/>
 
         <ImageView
             android:layout_width="25dp"
             android:layout_height="15dp"
             android:layout_gravity="center_vertical"
+            android:layout_marginStart="149dp"
             android:layout_marginLeft="149dp"
             android:src="@drawable/ic_vector">
 
@@ -99,7 +99,7 @@
         android:layout_marginEnd="151dp"
         android:layout_marginRight="151dp"
         android:layout_marginBottom="397dp"
-        android:text="Ой, пусто!"
+        android:text="@string/pusto"
         android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -115,7 +115,7 @@
         android:layout_marginTop="424dp"
         android:layout_marginBottom="350dp"
         android:gravity="center_horizontal"
-        android:text="Ваша корзина пуста, добавьте понравившийся товар."
+        android:text="@string/vashakorzina"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

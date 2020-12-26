@@ -1,18 +1,13 @@
 package com.example.idillika;
 
 
-import android.annotation.SuppressLint;
-import android.graphics.drawable.Drawable;
+
 import android.view.View;
-import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.squareup.picasso.Picasso;
 
 
@@ -21,7 +16,6 @@ public class MyHolder extends RecyclerView.ViewHolder {
     ImageView mImageView;
     CheckBox mFavorite;
     TextView mTitle,mBrand,mPrice;
-    //Boolean mBoolean;
 
     public MyHolder(@NonNull View itemView) {
         super(itemView);

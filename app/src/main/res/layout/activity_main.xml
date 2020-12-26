@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
     <include
         android:id="@+id/toolbar"
@@ -16,7 +16,6 @@
         android:id="@+id/button"
         android:layout_width="343dp"
         android:layout_height="48dp"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
@@ -35,26 +34,24 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="19dp"
+            android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="15dp"
             android:layout_marginBottom="16dp"
-            android:text="Показать товары"
+            android:text="@string/pokaztovar"
             android:textAllCaps="true"
             android:textColor="@color/white"
             android:textSize="14sp"
-            android:textStyle="bold">
-
-        </TextView>
+            android:textStyle="bold"/>
 
         <ImageView
             android:layout_width="25dp"
             android:layout_height="15dp"
             android:layout_gravity="center_vertical"
+            android:layout_marginStart="139dp"
             android:layout_marginLeft="139dp"
-            android:src="@drawable/ic_vector">
-
-        </ImageView>
+            android:src="@drawable/ic_vector" />
     </LinearLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout >
+</androidx.constraintlayout.widget.ConstraintLayout>

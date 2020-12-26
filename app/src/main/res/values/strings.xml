@@ -5,4 +5,10 @@
     <string name="clothes">ОДЕЖДА</string>
     <string name="title">Title</string>
     <string name="ruble">%1$s ₽</string>
+    <string name="pokaztovar">Показать товары</string>
+    <string name="pusto">Ой, пусто!</string>
+    <string name="vashakorzina">Ваша корзина пуста, добавьте понравившийся товар.</string>
+    <string name="starttovar">Начать покупки</string>
+    <string name="pricee">1000</string>
+    <string name="description">Description</string>
 </resources>
